@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+USER_BIN_PATH="$HOME/bin"
+
+if [ ! -d "$USER_BIN_PATH" ]; then
+    mkdir -p "$USER_BIN_PATH"
+fi
+
+if [ -f "$USER_BIN_PATH/manage_inbox" ]; then
+    rm "$USER_BIN_PATH/manage_inbox"
+fi
+
+cp manage_inbox tmp
+chmod u+x tmp
+mv tmp "$USER_BIN_PATH/manage_inbox"
