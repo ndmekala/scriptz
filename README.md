@@ -1,0 +1,2 @@
+# scriptz
+Misc bash scripts
